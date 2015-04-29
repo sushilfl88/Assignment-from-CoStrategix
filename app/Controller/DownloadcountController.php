@@ -174,7 +174,7 @@ class DownloadcountController extends AppController {
 
 function get_file_size($url) {
 
- 	$headers = get_headers($url, 1);
+ 	$headers = @get_headers($url, 1);
     
     if (isset($headers['Content-Length'])) 
        return $headers['Content-Length'];
